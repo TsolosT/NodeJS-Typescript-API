@@ -10,7 +10,7 @@ dotenv.config();
 //Init App
 const app: Express = express();
 //Local Server port 
-const port: any = process.env.PORT || 3000;
+const port:  number = parseInt(process.env.PORT as string, 10) || 3000;
 //Setting the root path for views directory
 app.set('views', path.join(__dirname, 'views'));
 //Setting the view engine

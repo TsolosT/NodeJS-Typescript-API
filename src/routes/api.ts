@@ -1,10 +1,12 @@
 import { Router, Request, Response} from 'express';
-
+import controller from '../controllers/api';
 const router = Router();
 
+//Fact Endpont
+router.get('/fact', controller.getDogFact);
 //Version Endpoint
 router.get("/version", (req : Request, res : Response) =>{
-    // res.json({ 
+    // res.status(200.json({ 
     //     reference : process.env.API_REFERENCE,
     //     commit : process.env.API_COMMIT,
     //     version : process.env.API_VERSION
@@ -13,7 +15,7 @@ router.get("/version", (req : Request, res : Response) =>{
 });
 //Health Endpont
 router.get("/health", (req : Request, res : Response) =>{
-    res.json({ message: 'Dog Find is Woof Woof and running.'});
+    res.status(200).json({ message: 'Dog Find is Woof Woof and running.'});
 });
 
 export default router;
