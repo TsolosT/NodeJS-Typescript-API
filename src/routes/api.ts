@@ -2,7 +2,9 @@ import { Router, Request, Response} from 'express';
 import controller from '../controllers/api';
 const router = Router();
 
-//Fact Endpont
+//Apis Endpoints
+// router.get('/breed/:name', controller.getBreedInfo);
+router.get('/breed/list', controller.getBreedList);
 router.get('/fact', controller.getDogFact);
 //Version Endpoint
 router.get("/version", (req : Request, res : Response) =>{
@@ -13,7 +15,7 @@ router.get("/version", (req : Request, res : Response) =>{
     // });
     res.send('Currenly not availiable...');
 });
-//Health Endpont
+//Health Endpoint
 router.get("/health", (req : Request, res : Response) =>{
     res.status(200).json({ message: 'Dog Find is Woof Woof and running.'});
 });
