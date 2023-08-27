@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+    <header class="m-0 p-3">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active"><a href="/apidemo">Api Demo</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Breed Info</li>
+            </ol>
+        </nav>
+    </header>
+
+    <div class="container mt-3">
+        <div class="row my-2">
+            <div class="card text-center px-0">
+                <div class="card-header">
+                    Dog Breed Info
+                </div>
+                <div class="card-body">
+                    <% if (data) { %>
+                        <h5 class="card-title"><%= data.name %></h5>
+                        <img src="<%= data.image_url %>"  alt="<%= data.name %>" height="200">
+                        <div class="card-body">
+                            <p class="card-text"><%= data.summary %></p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Οrigin: <%= data.origin %></li>
+                                <li class="list-group-item">Years to Live: <%= data.life_span %></li>
+                                <li class="list-group-item">Weight(kg): <%= data.weight_kg %></li>
+                                <li class="list-group-item">Height(cm): <%= data.height_cm %></li>
+                            </ul>
+                        </div>
+                    <% } else { %>
+                        <p>Not availiable at the momment..</p>
+                        <% } %>
+                    <a href="/apicatalog" class="btn btn-info text-light mb-1">  
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                        </svg>
+                        Api Catalog
+                    </a>
+                </div>
+                <div class="card-footer text-body-secondary">
+                    Last Update: 3 days ago
+                </div>
+            </div>
+        </div>
+
+    </div>
+<%- include('partials/footer') %>

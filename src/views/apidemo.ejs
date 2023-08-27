@@ -44,7 +44,7 @@
                                 <img src="<%= breed.image_url %>" class="card-img-top" alt="<%= breed.name %>" height="200">
                                 <div class="card-body">
                                     <h5 class="card-title"><%= breed.name %></h5>
-                                    <a href="/apidemo/<%= breed._id %>" class="btn btn-outline-primary">More Info</a>
+                                    <a href="/apidemo/info/<%= breed.id %>" class="btn btn-outline-primary">More Info</a>
                                 </div>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                 <% } else { %>
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body text-center">
                                 Breeds List is not availiable at the momment.
                             </div>
                         </div>

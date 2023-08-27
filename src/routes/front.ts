@@ -2,8 +2,13 @@ import { Router , Request, Response} from 'express';
 import controller from '../controllers/front';
 
 const router = Router();
+
+/* Api Catalog */
+router.get("/apicatalog", controller.showCatalog);
+/* Api Catalog */
+router.get("/apidemo/info/:id", controller.showDemoBreedData);
 /* Api Demo */
-router.get("/apidemo", controller.getDemoData);
+router.get("/apidemo", controller.showDemoData);
 /* Home route */
 router.get("/", (req : Request, res : Response) => {
     res.render('index');

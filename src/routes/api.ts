@@ -3,7 +3,7 @@ import controller from '../controllers/api';
 const router = Router();
 
 //Apis Endpoints
-// router.get('/breed/:name', controller.getBreedInfo);
+router.get('/breed/info/:id', controller.getBreedInfo);
 router.get('/breed/list', controller.getBreedList);
 router.get('/fact', controller.getDogFact);
 //Version Endpoint
