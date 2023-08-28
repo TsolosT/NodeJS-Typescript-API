@@ -4,7 +4,9 @@ import controller from '../controllers/front';
 const router = Router();
 
 /* Api Catalog */
-router.get("/apicatalog", controller.showCatalog);
+router.get("/apicatalog", (req : Request, res : Response) => {
+    res.render('apicatalog');
+});
 /* Api Catalog */
 router.get("/apidemo/info/:id", controller.showDemoBreedData);
 /* Api Demo */

@@ -2,13 +2,6 @@ import { Request, Response, NextFunction } from "express";
 import axios, { AxiosResponse } from 'axios';
 
 //Get Api Catalog Page
-const showCatalog = async (req: Request, res: Response, next: NextFunction) => {
-    const endpoint: string = 'http://localhost:3000'; // Temp
-    
-    res.send("Wait");
-};
-
-//Get Api Catalog Page
 const showDemoBreedData = async (req: Request, res: Response, next: NextFunction) => {
 
     const endpoint: string = 'http://localhost:3000'; // Temp
@@ -47,4 +40,4 @@ const showDemoData = async (req: Request, res: Response, next: NextFunction) => 
 };
 
 //Exports
-export default { showDemoData, showCatalog, showDemoBreedData };
+export default { showDemoData, showDemoBreedData };

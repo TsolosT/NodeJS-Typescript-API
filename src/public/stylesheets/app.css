@@ -1,0 +1,25 @@
+.accordion-button:not(.collapsed) {
+    color: #ffffff!important;
+    background-color: #0dcaf0 !important;
+}
+.endpoint-method {
+    border-right: 1px solid #fff;
+    font-size: larger;
+    font-weight: 500;
+    margin-right: 1em;
+    padding-right: 1em;
+}
+.endpoint-text {
+    font-size: large;
+    margin-right: 6em;
+}
+.box-info {
+    background-color: #0dcaf0;
+    color: #fff;
+    margin: 1em;
+    padding: 1.5em;
+}
+p.accordion-button::after { width: 0!important;}
+.over-auto {
+    overflow: auto;
+}

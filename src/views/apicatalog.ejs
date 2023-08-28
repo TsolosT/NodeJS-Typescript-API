@@ -1,0 +1,334 @@
+<%- include('partials/header') %>
+
+    <header class="m-0 p-3 bg-info">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/" class="link-dark">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Api Catalogue</li>
+            </ol>
+        </nav>
+    </header>
+    <section class="container mt-3">
+        <div class="row">
+            <div class="col-3">
+                <h4 class="text-secondary">API Servers:</h4>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>http://localhost:3000/api/</option>
+                    <option value="OtherServer">Not Availiable</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="row mb-3">
+            <h2 class="text-dark my-4">
+                Dog API
+                <small class="text-muted">version 1.0.0</small>
+            </h2>
+            
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span class="d-flex justify-content-between p-0 text-left w-100">
+                                <div>
+                                    <span class="endpoint-method">GET</span>
+                                    <span class="endpoint-text">/breed/list</span>
+                                </div>
+                                <span class="endpoint-text">Retrieves All Dog Breeds</span>
+                            </span>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <div class="d-flex flex-column m-1">
+                                        <!-- Description -->
+                                        <div>
+                                            <h3>Description</h3>
+                                            <p class="lead">This Method retrieves a list of dog breeds.</p>
+                                        </div>
+                                        <hr>
+                                        <!-- Request -->
+                                        <div>
+                                            <h3>Request</h3>
+                                            <p class="text-muted">Request Body </p>
+                                            <div class="box-info overflow">
+                                                <pre style="white-space: pre-wrap;">{}</pre>
+                                            </div> 
+                                        </div>
+                                        <hr>
+                                        <!-- Response -->
+                                        <div>
+                                            <h3>Response</h3>
+                                            <p>
+                                                <b>200</b> | OK
+                                            </p>
+
+                                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingOne">
+                                                        <p class="accordion-button collapsed text-info" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                            Example Response Body
+                                                        </p>
+                                                    </h2>
+                                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body box-info overflow">
+                                                                <pre style="white-space: pre-wrap;">{ 
+    { 
+        "id": "68f47c5a-5115-47cd-9849-e45d3c378f12", 
+        "name": "Caucasian Shepherd Dog",
+        "image_url": "https://images.pexels.com/photos/4921275/pexels-photo-4921275.jpeg?auto=compress&cs=tinysrgb&h=350" 
+    }, 
+    { 
+        "id": "f534c847-bed1-4b58-b194-dc06ecfe20f9", 
+        "name": "Grand Basset Griffon Vendéen", 
+        "image_url": "https://images.pexels.com/photos/786773/pexels-photo-786773.jpeg?auto=compress&cs=tinysrgb&h=350" 
+    }
+}                                                                </pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                                        <p class="accordion-button collapsed text-info" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                            Description for Response Fields
+                                                        </p>
+                                                    </h2>
+                                                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body">
+                                                            <ul class="list-group list-group-flush">
+                                                                <li class="list-group-item"> <b>id</b> | x:string | Dog Breed Unique key identify</li>
+                                                                <li class="list-group-item"> <b>name</b> | x:string | Dog Breed Name</li>
+                                                                <li class="list-group-item"> <b>image_url</b> | x:string - null | Dog Breed Image</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                            <p>
+                                                <b>401</b> | Unauthorized - User can not access this endpoint  <span class="badge bg-secondary">Only in Paid Version</span> 
+                                            </p>
+                                            <p>
+                                                <b>403</b> | Forbidden - User can access but not have rights <span class="badge bg-secondary">Only in Paid Version</span> 
+                                            </p>
+                                            <p>
+                                                <b>404</b> | Not Found - Page that is looking for is does not exist <span class="badge bg-secondary">Only in Paid Version</span> 
+                                            </p>
+                                            <p>
+                                                <b>500</b> | Internal Server Error
+                                            </p>
+                                            <p>
+                                                <b>502</b> | Bad Gateway <span class="badge bg-secondary">Only in Paid Version</span> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBreed" aria-expanded="true" aria-controls="collapseBreed">
+                            <span class="d-flex justify-content-between p-0 text-left w-100">
+                                <div>
+                                    <span class="endpoint-method">GET</span>
+                                    <span class="endpoint-text">/breed/info/:id</span>
+                                </div>
+                                <span class="endpoint-text">Retrieves Breed Basic Info</span>
+                            </span>
+                        </button>
+                    </h2>
+                    <div id="collapseBreed" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <div class="d-flex flex-column m-1">
+                                        <!-- Description -->
+                                        <div>
+                                            <h3>Description</h3>
+                                            <p class="lead">This Method retrieves a breed basic info.</p>
+                                        </div>
+                                        <hr>
+                                        <!-- Request -->
+                                        <div>
+                                            <h3>Request</h3>
+                                            <p class="text-muted">Request Body </p>
+                                            <div class="box-info overflow">
+                                                <pre style="white-space: pre-wrap;">{}</pre>
+                                            </div> 
+                                        </div>
+                                        <hr>
+                                        <!-- Response -->
+                                        <div>
+                                            <h3>Response</h3>
+                                            <p>
+                                                <b>200</b> | OK
+                                            </p>
+
+                                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingOne">
+                                                        <p class="accordion-button collapsed text-info" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                            Example Response Body
+                                                        </p>
+                                                    </h2>
+                                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body box-info overflow">
+                                                                <pre style="white-space: pre-wrap;">{ 
+    "data": {
+        "id": "f534c847-bed1-4b58-b194-dc06ecfe20f9",
+        "name": "Grand Basset Griffon Vendéen",
+        "summary": "The Grand Basset Griffon Vendéen is a medium-sized breed of scent hound from the Vendéen region of France. These dogs are medium in size, with a long and wiry coat of fur. They have an energetic and cheerful demeanor, with an instinct for hunting and tracking. They are highly trainable and intelligent, but require firm and consistent training to be obedient. They are loyal and devoted to their family, but can be stubborn and independent at times.",
+        "origin": "Not Availiable",
+        "life_span": "12 to 15",
+        "weight_kg": "20 to 30",
+        "height_cm": "Not Availiable",
+        "image_url": "https://images.pexels.com/photos/786773/pexels-photo-786773.jpeg?auto=compress&cs=tinysrgb&h=350"
+    }
+}                                                                </pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                                        <p class="accordion-button collapsed text-info" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                            Description for Response Fields
+                                                        </p>
+                                                    </h2>
+                                                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body">
+                                                            <ul class="list-group list-group-flush">
+                                                                <li class="list-group-item"> <b>id</b> | x:string | Dog Breed Unique key identify</li>
+                                                                <li class="list-group-item"> <b>name</b> | x:string | Dog Breed Name</li>
+                                                                <li class="list-group-item"> <b>summary</b> | x:string - null | Dog Breed Description</li>
+                                                                <li class="list-group-item"> <b>origin</b> | x:string - null | Dog Breed Origin</li>
+                                                                <li class="list-group-item"> <b>life_span</b> | x:string - null | Dog Breed Average years to live</li>
+                                                                <li class="list-group-item"> <b>weight_kg</b> | x:string - null | Dog Breed Average weight in KG</li>
+                                                                <li class="list-group-item"> <b>height_cm</b> | x:string - null | Dog Breed Average height in CM</li>
+                                                                <li class="list-group-item"> <b>image_url</b> | x:string - null | Dog Breed Image</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                            <p>
+                                                <b>401</b> | Unauthorized - User can not access this endpoint  <span class="badge bg-secondary">Only in Paid Version</span> 
+                                            </p>
+                                            <p>
+                                                <b>403</b> | Forbidden - User can access but not have rights <span class="badge bg-secondary">Only in Paid Version</span> 
+                                            </p>
+                                            <p>
+                                                <b>404</b> | Not Found - Page that is looking for is does not exist <span class="badge bg-secondary">Only in Paid Version</span> 
+                                            </p>
+                                            <p>
+                                                <b>500</b> | Internal Server Error
+                                            </p>
+                                            <p>
+                                                <b>502</b> | Bad Gateway <span class="badge bg-secondary">Only in Paid Version</span> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFact" aria-expanded="true" aria-controls="collapseFact">
+                            <span class="d-flex justify-content-between p-0 text-left w-100">
+                                <div>
+                                    <span class="endpoint-method">GET</span>
+                                    <span class="endpoint-text">/fact</span>
+                                </div>
+                                <span class="endpoint-text">Retrieves Dog Fact</span>
+                            </span>
+                        </button>
+                    </h2>
+                    <div id="collapseFact" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <div class="d-flex flex-column m-1">
+                                        <!-- Description -->
+                                        <div>
+                                            <h3>Description</h3>
+                                            <p class="lead">This Method retrieves a fun fact about dogs</p>
+                                        </div>
+                                        <hr>
+                                        <!-- Request -->
+                                        <div>
+                                            <h3>Request</h3>
+                                            <p class="text-muted">Request Body </p>
+                                            <div class="box-info overflow">
+                                                <pre style="white-space: pre-wrap;">{}</pre>
+                                            </div> 
+                                        </div>
+                                        <hr>
+                                        <!-- Response -->
+                                        <div>
+                                            <h3>Response</h3>
+                                            <p>
+                                                <b>200</b> | OK
+                                            </p>
+
+                                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingOne">
+                                                        <p class="accordion-button collapsed text-info" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                            Example Response Body
+                                                        </p>
+                                                    </h2>
+                                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body box-info overflow">
+                                                                <pre style="white-space: pre-wrap;">{ 
+    { 
+        "fact": "Three dogs survived the sinking of the Titanic: a Newfoundland, a Pomeranian, and a Pekingese."
+    }
+}                                                                </pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                                        <p class="accordion-button collapsed text-info" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                            Description for Response Fields
+                                                        </p>
+                                                    </h2>
+                                                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body">
+                                                            <ul class="list-group list-group-flush">
+                                                                <li class="list-group-item"> <b>fact</b> | x:string | Fun Fact about dogs</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                            <p>
+                                                <b>401</b> | Unauthorized - User can not access this endpoint  <span class="badge bg-secondary">Only in Paid Version</span> 
+                                            </p>
+                                            <p>
+                                                <b>403</b> | Forbidden - User can access but not have rights <span class="badge bg-secondary">Only in Paid Version</span> 
+                                            </p>
+                                            <p>
+                                                <b>404</b> | Not Found - Page that is looking for is does not exist <span class="badge bg-secondary">Only in Paid Version</span> 
+                                            </p>
+                                            <p>
+                                                <b>500</b> | Internal Server Error
+                                            </p>
+                                            <p>
+                                                <b>502</b> | Bad Gateway <span class="badge bg-secondary">Only in Paid Version</span> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+<%- include('partials/footer') %>
