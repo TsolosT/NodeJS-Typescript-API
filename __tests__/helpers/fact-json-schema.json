@@ -1,0 +1,8 @@
+
+{
+    "type": "object",
+    "properties": {
+        "fact": { "type": "string" }
+    },
+    "required": ["fact"]
+}

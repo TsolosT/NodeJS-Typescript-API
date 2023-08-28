@@ -8,7 +8,7 @@ import routes from './routes';
 //Initialize configuration 
 dotenv.config();
 //Init App
-const app: Express = express();
+export const app: Express = express();
 //Local Server port 
 const port:  number = parseInt(process.env.PORT as string, 10) || 3000;
 //Setting the root path for views directory

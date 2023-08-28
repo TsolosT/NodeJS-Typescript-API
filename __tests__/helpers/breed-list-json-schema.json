@@ -1,0 +1,13 @@
+
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": { "type": "string" },
+            "name": { "type": "string" },
+            "image_url": { "type": ["string", "null"] }
+        },
+        "required": ["id", "name", "image_url"]
+    }
+}
